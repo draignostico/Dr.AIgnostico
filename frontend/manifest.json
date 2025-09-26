@@ -1,0 +1,18 @@
+{
+  "name": "Dr IAgóstico",
+  "short_name": "DrIAgnóstico",
+  "description": "Sistema de apoio ao diagnóstico médico",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0066e6",
+  "theme_color": "#0066e6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/doutor.png",
+      "sizes": "300x400",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

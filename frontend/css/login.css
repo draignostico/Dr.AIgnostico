@@ -1,0 +1,107 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle, #0066e6, #003b8f);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container principal */
+.container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.container h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #222;
+}
+
+/* Estilo dos inputs */
+.form-control {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.form-control:focus {
+  border-color: #0066e6;
+}
+
+/* Botão principal */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background-color: #0066e6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0052b3;
+}
+
+/* Área de links abaixo do botão */
+.link-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.link-container a {
+  background: #4d94ff;
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  flex: 1;
+  transition: background-color 0.3s;
+}
+
+.link-container a:hover {
+  background: #3377e6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+  }
+  
+  .container h1 {
+    font-size: 24px;
+  }
+  
+  .link-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Fundo degradê azul */
+body {
+  background: radial-gradient(circle, #0066e6, #003b8f);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container branco */
+.container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+}
+
+/* Título */
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Imagem do robô (mascote) */
+.robot-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 20px 0;
+}
+
+/* Botão CRM */
+.crm-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.crm-button:hover {
+  background-color: #005FCC;
+}
+
+/* Texto de cadastro */
+.cadastro {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.cadastro a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.cadastro a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+    min-height: 85vh;
+    margin: 10px;
+  }
+  
+  .container h1 {
+    font-size: 24px;
+  }
+  
+  .robot-img {
+    max-width: 200px;
+    margin: 10px 0;
+  }
+  
+  .crm-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}

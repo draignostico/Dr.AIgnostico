@@ -1,0 +1,12 @@
+flask
+flask-restx
+flask-cors
+flask-bcrypt
+pymongo
+langchain
+langchain-community
+langchain-groq
+langchain-huggingface
+sentence-transformers
+PyPDF2
+faiss-cpu

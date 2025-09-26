@@ -1,0 +1,33 @@
+# === AMBIENTE VIRTUAL ===
+venv/
+.env
+*.env
+
+# === CACHE E COMPILAÇÃO PYTHON ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# === LOGS E TEMPORÁRIOS ===
+*.log
+*.tmp
+*.swp
+
+# === SAÍDA DE BUILD/DIST ===
+build/
+dist/
+*.egg-info/
+
+# === CONFIGURAÇÕES DE EDITOR/IDE ===
+.vscode/
+.idea/
+
+# === DADOS E VETORES (GERADOS LOCALMENTE) ===
+dados/
+vetores_doencas/
+
+# === SISTEMA OPERACIONAL ===
+.DS_Store
+Thumbs.db

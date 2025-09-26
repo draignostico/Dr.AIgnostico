@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 30px 20px;
+}
+
+.pesquisa-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 80px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #1463b1;
+    margin-bottom: 50px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.pesquisa-input-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#doencaInput {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#doencaInput:focus {
+    border-color: #3498db;
+}
+
+.sugestoes-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+
+.sugestao-item {
+    padding: 12px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.sugestao-item:hover {
+    background-color: #f8f9fa;
+}
+
+.sugestao-item:last-child {
+    border-bottom: none;
+}
+
+.btn-pesquisar {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    max-width: 800px;
+}
+
+.btn-pesquisar:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+@media (max-width: 480px) {
+    .pesquisa-container {
+        padding: 50px 30px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .btn-pesquisar {
+        padding: 14px 30px;
+        font-size: 15px;
+    }
+}

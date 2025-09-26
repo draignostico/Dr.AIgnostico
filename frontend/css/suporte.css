@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f9f3f3 0%, #e6f0ff 100%);
+  color: #222;
+  min-height: 100vh;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.mascote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mascote img {
+  height: 400px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.form-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid #0073e6;
+  width: 450px;
+  box-shadow: 0 4px 10px rgba(0, 115, 230, 0.15);
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e3d7b;
+  font-size: 22px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0073e6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e3d7b;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #1e3d7b;
+  border-radius: 18px;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #0073e6;
+  box-shadow: 0 0 0 2px rgba(0, 115, 230, 0.2);
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+}
+
+.row div {
+  flex: 1;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#btn {
+  background: #0073e6;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 18px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 115, 230, 0.3);
+  transition: all 0.2s;
+}
+
+#btn:hover {
+  background: #005bb7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 115, 230, 0.4);
+}
+
+/* PRIMEIRO: Regras para celular (a mais importante) */
+@media (max-width: 768px) {
+  .mascote {
+    display: none;
+  }
+  
+  .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-box {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* DEPOIS: Regras para tablet */
+@media (min-width: 769px) and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .mascote img {
+    height: 250px;
+  }
+  
+  .form-box {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+/* FINALMENTE: Celular muito pequeno */
+@media (max-width: 500px) {
+  .row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .form-box {
+    padding: 20px;
+  }
+  
+  form input, form textarea {
+    padding: 8px 10px;
+  }
+  
+  body {
+    padding-top: 60px;
+  }
+}
+
+.required {
+  color: #ff0000;
+}
+
+.form-note {
+  text-align: center;
+  margin-top: 12px;
+  color: #666;
+  font-size: 12px;
+}
