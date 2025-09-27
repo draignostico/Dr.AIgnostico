@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <title>Editar Dados</title>
@@ -91,7 +92,7 @@
     }
 
     .mascot {
-      width: 320px; 
+      width: 320px;
     }
 
     /* Responsividade */
@@ -99,6 +100,7 @@
       .page {
         flex-direction: column;
       }
+
       .panel-right {
         width: 100%;
         height: 200px;
@@ -106,10 +108,11 @@
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <div class="panel-left">
-      <div class="back-btn">&#8592;</div>
+      <a href="perfil.php" class="back-btn">&#8592;</a>
       <div class="form-wrap">
         <h1>Edite seus dados:</h1>
 
@@ -133,11 +136,13 @@
       <img class="mascot" src="img/doutor.png" alt="Mascote médico">
     </div>
 
- <script>
-    function Redefinir() {
+    <script>
+      function Redefinir() {
         alert("Enviamos as instruções para o seu email.");
-    }
-  </script>
+      }
+
+    </script>
 
 </body>
+
 </html>

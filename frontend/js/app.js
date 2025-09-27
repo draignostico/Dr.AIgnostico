@@ -83,9 +83,12 @@ function adicionarSintoma(texto) {
   sintomasContainer.appendChild(sintomaTag);
 }
 
-// Captura tecla espaço no input
-document.getElementById('sintomaInput').addEventListener('keyup', function(e) {
-  if (e.key === ' ' || e.key === 'Spacebar') {
+// ==========================
+// Captura tecla Enter no input
+// ==========================
+document.getElementById('sintomaInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
     const texto = this.value.trim();
     if (texto) {
       adicionarSintoma(texto);
@@ -111,7 +114,6 @@ async function mostrarDiagnosticos() {
   document.getElementById('carregando').style.display = 'block';
 
   try {
-    // Aqui é o prompt seguro para a LLM
     const prompt = `
       Baseado nos seguintes sintomas: ${sintomas.join(", ")}.
       Liste apenas doenças médicas relevantes, sem outros tópicos ou informações irrelevantes.

@@ -14,7 +14,7 @@ include 'Navbar.php';
                 <div class="sintomas-container" id="sintomasContainer"></div>
             </div>
 
-            <p class="instrucoes">Digite os sintomas e pressione **Enter** para adicionar cada um</p>
+            <p class="instrucoes">Digite os sintomas e pressione Enter para adicionar cada um</p>
             <button class="enviar-btn-mobile" onclick="mostrarDiagnosticos()">Enviar</button>
 
             <div id="resultadoDiagnostico" class="resultado-container" style="display: none;">
