@@ -28,8 +28,9 @@ Passos para rodar o projeto
 
 Abrir o terminal e navegar até a pasta do projeto cd C:\xampp\htdocs\Dr.AIgnostico
 
-Criar e ativar o ambiente virtual dentro do backend cd backend python -m venv venv (criar uma máquina virtual)
-(ativar a máquina virtual) venv\Scripts\Activate.ps1
+Criar e ativar o ambiente virtual dentro do backend cd backend 
+(criar uma máquina virtual) python -m venv venv 
+(ativar a máquina virtual) venv\Scripts\Activate
 
 ⚠️ Se der erro no PowerShell sobre execução de scripts, rode:
 
