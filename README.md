@@ -44,4 +44,4 @@ Rodar a aplicação python run.py
 
 Acessar a aplicação
 
-Front-end: http://127.0.0.1:5000/frontend](http://localhost/Dr.AIgnostico/frontend/login.html
+Front-end: http://localhost/Dr.AIgnostico/frontend/login.php
