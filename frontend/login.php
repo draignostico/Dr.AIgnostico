@@ -50,8 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php if ($erro)
       echo "<p style='color:red;'>$erro</p>"; ?>
     <form method="POST">
-      <input type="text" name="crm" placeholder="CRM" required>
-      <input type="password" name="senha" placeholder="Senha" required>
+      <input type="text" class="form-control" name="crm" placeholder="CRM" required>
+      <input type="password" class="form-control" name="senha" placeholder="Senha" required>
       <button type="submit" class="btn-primary">ENTRAR</button>
       <div class="link-container">
         <a href="Cadastro.php">Criar conta</a>

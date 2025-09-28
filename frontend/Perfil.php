@@ -9,7 +9,7 @@
   <section class="profile-header">
     <img src="img/perfil.png" alt="Usuário" class="user-photo">
     <h2>Evellyn Furtado</h2>
-    <p class="member-since">Membro desde<br>28 de jul. de 2024</p>
+    <!-- <p class="member-since">Membro desde<br>28 de jul. de 2024</p> -->
   </section>
 
   <section class="profile-options">
@@ -25,14 +25,14 @@
     function confirmarSaida() {
       if(confirm("Tem certeza que deseja sair da sua conta?")) {
         alert("Saindo da conta...");
-        window.location.href = 'index.html';
+        window.location.href = 'index.php';
       }
     }
     
     function confirmarExclusao() {
       if(confirm("Tem certeza que deseja excluir sua conta? Esta ação não pode ser desfeita.")) {
         alert("Conta marcada para exclusão...");
-        // window.location.href = 'delete-account.php';
+        window.location.href = 'index.php';
       }
     }
   </script>

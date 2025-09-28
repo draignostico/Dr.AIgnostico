@@ -1,6 +1,5 @@
-// ==========================
+
 // Verificar se está online/offline
-// ==========================
 window.addEventListener('online', function() {
   document.body.classList.remove('offline');
   showMessage('Conectado à internet', 'success');
@@ -11,9 +10,7 @@ window.addEventListener('offline', function() {
   showMessage('Você está offline', 'warning');
 });
 
-// ==========================
 // Função para mostrar mensagens
-// ==========================
 function showMessage(message, type = 'info') {
   const existingMessage = document.getElementById('app-message');
   if (existingMessage) existingMessage.remove();
@@ -48,9 +45,7 @@ function showMessage(message, type = 'info') {
   }, 3000);
 }
 
-// ==========================
 // Estilos adicionais
-// ==========================
 const style = document.createElement('style');
 style.textContent = `
   @keyframes fadeIn {
@@ -61,9 +56,7 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ==========================
 // Função para adicionar sintomas
-// ==========================
 function adicionarSintoma(texto) {
   if (!texto.trim()) return;
   const sintomasContainer = document.getElementById('sintomasContainer');
@@ -83,9 +76,7 @@ function adicionarSintoma(texto) {
   sintomasContainer.appendChild(sintomaTag);
 }
 
-// ==========================
 // Captura tecla Enter no input
-// ==========================
 document.getElementById('sintomaInput').addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
     e.preventDefault();
@@ -97,9 +88,7 @@ document.getElementById('sintomaInput').addEventListener('keydown', function(e) 
   }
 });
 
-// ==========================
 // Função para chamar a LLM e mostrar diagnósticos
-// ==========================
 async function mostrarDiagnosticos() {
   const sintomas = Array.from(document.querySelectorAll('.sintoma-tag span'))
                         .map(span => span.textContent);
@@ -154,17 +143,13 @@ async function mostrarDiagnosticos() {
   }
 }
 
-// ==========================
 // Redirecionar para página de informações
-// ==========================
 function selecionarDiagnostico(doenca) {
   const sintomas = Array.from(document.querySelectorAll('.sintoma-tag span'))
                         .map(span => encodeURIComponent(span.textContent)).join(',');
   window.location.href = `Informacoes.php?doenca=${encodeURIComponent(doenca)}&sintomas=${sintomas}`;
 }
 
-// ==========================
 // Configurar botões de envio
-// ==========================
 document.querySelector('.enviar-btn').addEventListener('click', mostrarDiagnosticos);
 document.querySelector('.enviar-btn-mobile').addEventListener('click', mostrarDiagnosticos);

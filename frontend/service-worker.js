@@ -1,13 +1,42 @@
 const urlsToCache = [
-  // ... URLs existentes
-  '/Navbar.html',
+  //CSS
+  '/css/cadastro.css',
+  '/css/diagnostico.css',
+  '/css/editardados.css',
+  '/css/estilo.css',
+  '/css/informacoes.css',
+  '/css/login.css',
   '/css/navbar.css',
+  '/css/perfil.css',
+  '/css/pesquisa.css',
+  '/css/recuperarsenha.css',
+  '/css/suporte.css',
+
+   //JS
   '/js/load-navbar.js',
-  '/Home.html',
-  '/Diagnostico.html',
-  '/Historico.html',
-  '/Anotacoes.html',
-  '/Perfil.html'
+
+  //PHP - HTML
+  '/Cadastro.php',
+  '/Conexao.php',
+  '/Diagnostico.php',
+  '/Home.php',
+  '/Index.php',
+  '/Informacoes.php',
+  '/Login.php',
+  '/Navbar.php',
+  '/Perfil.php',
+  '/Pesquisa.php',
+  '/Recuperarsenha.php',
+  '/Salvar_historico.php',
+  '/Suporte.php',
+
+  //IMG
+  '/img/configuracao.png',
+  '/img/doutor.png',
+  '/img/iconbaixar.png',
+  '/img/icondocs.png',
+  '/img/perfil.png',
+
 ];
 
 // Instalação do Service Worker

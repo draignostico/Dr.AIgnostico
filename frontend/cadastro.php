@@ -63,10 +63,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php if ($sucesso)
       echo "<p style='color:green;'>$sucesso</p>"; ?>
     <form method="POST">
-      <input type="text" name="nome" placeholder="Nome" required>
-      <input type="text" name="crm" placeholder="CRM" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="password" name="senha" placeholder="Senha" required>
+      <input type="text" class="form-control" name="nome" placeholder="Nome" required>
+      <input type="text" class="form-control" name="crm" placeholder="CRM" required>
+      <input type="email" class="form-control" name="email" placeholder="Email" required>
+      <input type="password" class="form-control" name="senha" placeholder="Senha" required>
       <button type="submit" class="btn-primary">Criar Conta</button>
       <p class="cadastro">Já tem uma conta? <a href="Login.php">Faça Login</a></p>
     </form>

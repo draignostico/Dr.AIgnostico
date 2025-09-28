@@ -26,7 +26,7 @@ include 'Navbar.php';
 
             <div id="carregando" style="display: none;">
                 <p>Analisando sintomas...</p>
-            </div>
+            </div>          
         </div>
 
         <div class="right-panel">

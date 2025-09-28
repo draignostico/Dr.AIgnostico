@@ -6,7 +6,6 @@
   <title>Dr. AIgnóstico</title>
   <link rel="stylesheet" href="css/navbar.css">
   <style>
-    /* Estilo adicional para garantir que a imagem fique pequena */
     .settings-icon {
       width: 16px !important;
       height: 16px !important;
@@ -43,9 +42,9 @@
   </div>
 
   <script>
-    // Variáveis que virão do banco de dados (exemplo)
-    const userName = "Evellyn Furtado"; // Esta variável será preenchida com dados do banco
-    const userCrm = "CRM/SP 123456"; // Esta variável será preenchida com dados do banco
+    // Variáveis que virão do banco de dados 
+    const userName = "Evellyn Furtado"; 
+    const userCrm = "CRM/SP 123456"; 
     
     // Atualiza os elementos com os dados do usuário
     document.getElementById("user-name").textContent = userName;
@@ -59,19 +58,16 @@
 
       // muda entre hambúrguer e X
       if (sidebar.classList.contains("open")) {
-        btn.innerHTML = "&#10005;"; // X
+        btn.innerHTML = "&#10005;";
       } else {
-        btn.innerHTML = "&#9776;"; // hambúrguer
+        btn.innerHTML = "&#9776;"; 
       }
     });
 
     function abrirSuporte() {
-      // Aqui você pode redirecionar para uma página de configurações
-      // ou abrir um modal com opções de configuração
       window.location.href = 'Suporte.php';
     }
 
-    // Fechar o menu ao clicar fora dele
     document.addEventListener('click', (event) => {
       const isClickInsideSidebar = sidebar.contains(event.target);
       const isClickOnHamburger = btn.contains(event.target);
