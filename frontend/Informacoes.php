@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/informacoes.css">
 </head>
 <body>
-    <a href="Diagnostico.php" class="back-arrow">
+    <a href="Home.php" class="back-arrow">
         <i class="fas fa-arrow-left"></i>
     </a>
     
