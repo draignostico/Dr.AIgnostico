@@ -33,7 +33,7 @@
             </div>
             
             <div class="botoes-container">
-                <button class="btn-pesquisar" onclick="pesquisarDoenca()">Pesquisar</button>
+                <button class="btn-pesquisar" onclick="pesquisarDoenca()" href="Informacoes.php?id=<?php echo $id; ?>&origem=pesquisa">Pesquisar</button>
             </div>
         </div>
     </div>

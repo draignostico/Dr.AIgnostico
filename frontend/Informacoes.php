@@ -1,3 +1,7 @@
+<?php
+$origem = $_GET['origem'] ?? 'pesquisa'; 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,7 +12,7 @@
     <link rel="stylesheet" href="css/informacoes.css">
 </head>
 <body>
-    <a href="Home.php" class="back-arrow">
+    <a href="<?php echo $origem; ?>.php" class="back-arrow">
         <i class="fas fa-arrow-left"></i>
     </a>
     
@@ -73,10 +77,10 @@
                 tratamentosList.innerHTML = "<li>Não informado</li>";
             }
 
-            // Preenche aviso (se existir)
-            if (data.aviso) {
-                document.getElementById("aviso").innerText = data.aviso;
-            }
+            // // Preenche aviso (se existir)
+            // if (data.aviso) {
+            //     document.getElementById("aviso").innerText = data.aviso;
+            // }
         })
         .catch(err => {
             document.getElementById("descricao").innerText = "Erro ao carregar dados.";

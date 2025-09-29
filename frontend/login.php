@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       // Login ok
       $_SESSION['usuario_id'] = $usuario['id'];
       $_SESSION['usuario_nome'] = $usuario['nome'];
-      header("Location: Home.php");
+      $_SESSION['usuario_crm'] = $usuario['crm'];
+      header("Location: Diagnostico.php");
       exit;
     } else {
       $erro = "CRM ou senha inválidos.";

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: Login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -28,12 +35,17 @@
   <div id="sidebar" class="sidebar">
     <div class="sidebar-header">
       <button class="settings-btn" id="settings-btn" onclick="abrirSuporte()" style="width: 28px; height: 28px;">
-        <img src="img/configuracao.png" alt="Configurações" class="settings-icon" style="width: 16px; height: 16px;">
+        <img src="img/configuracao.png" alt="Configurações" class="settings-icon">
       </button>
-      <strong id="user-name">Evellyn Furtado</strong>
-      <span class="crm" id="user-crm">CRM/SP 123456</span>
+      <strong id="user-name">
+        <?php echo $_SESSION['usuario_nome']; ?>
+      </strong>
+      <br>
+      <span class="crm" id="user-crm">
+        CRM: <?php echo $_SESSION['usuario_crm']; ?>
+      </span>
     </div>
-    <a href="Home.php">HOME</a>
+    <!-- <a href="Home.php">HOME</a> -->
     <a href="Diagnostico.php">DIAGNÓSTICO</a>
     <!-- <a href="Historico.php">HISTÓRICO</a> -->
     <!-- <a href="Anotacoes.php">ANOTAÇÕES</a> -->
@@ -42,14 +54,6 @@
   </div>
 
   <script>
-    // Variáveis que virão do banco de dados 
-    const userName = "Evellyn Furtado"; 
-    const userCrm = "CRM/SP 123456"; 
-    
-    // Atualiza os elementos com os dados do usuário
-    document.getElementById("user-name").textContent = userName;
-    document.getElementById("user-crm").textContent = userCrm;
-
     const btn = document.getElementById("menu-btn");
     const sidebar = document.getElementById("sidebar");
 
@@ -57,11 +61,7 @@
       sidebar.classList.toggle("open");
 
       // muda entre hambúrguer e X
-      if (sidebar.classList.contains("open")) {
-        btn.innerHTML = "&#10005;";
-      } else {
-        btn.innerHTML = "&#9776;"; 
-      }
+      btn.innerHTML = sidebar.classList.contains("open") ? "&#10005;" : "&#9776;";
     });
 
     function abrirSuporte() {
